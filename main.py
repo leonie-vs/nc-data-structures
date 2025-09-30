@@ -72,3 +72,10 @@ print(test_stack.storage)
 print(test_stack.quantity) 
 test_stack.push('cherry')  
 print(test_stack.quantity)
+
+# Test is_empty method
+empty_stack = Stack()
+print(empty_stack.is_empty())
+
+empty_stack.push('cherry')
+print(empty_stack.is_empty())

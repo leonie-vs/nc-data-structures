@@ -78,4 +78,13 @@ def test_pop_handles_empty_storage_without_error():
     assert test_stack.pop() == None
     assert test_stack.quantity == 0
     assert test_stack.storage == {}
+
+# Test 11
+def test_is_empty_returns_boolean_correctly():
+    test_stack = Stack()
+    assert test_stack.is_empty() == True
+
+    test_stack.push("apple")
+    test_stack.push("banana")
+    assert test_stack.is_empty() == False
    

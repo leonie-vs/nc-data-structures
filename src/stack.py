@@ -17,4 +17,10 @@ class Stack:
             return
         self.quantity -= 1
         return self.storage.pop(self.quantity)
+    
+    def is_empty(self):
+        if self.quantity == 0 and self.storage == {}:
+            return True
+        return False
+
         
