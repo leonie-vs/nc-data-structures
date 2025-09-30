@@ -29,6 +29,6 @@ def test_weaken_does_not_go_below_zero():
 
 # Testing __str__ method
 # Test 5 - using str(<potion>) returns string with object's actual name, colour, and power_level value
-def test_print_returns_string_describing_object():
+def test_str_returns_string_describing_object():
     healing = Potion("Healing Potion", "Green", 50)
     assert str(healing) == "Potion: Healing Potion (Green), Power Level: 50"

@@ -1,4 +1,6 @@
 from src.potion import Potion 
+from src.wizard import Wizard 
+
 # Create different potions using Potion class
 healing = Potion("Healing Potion", "Green", 50)
 stamina = Potion("Stamina Potion", "Red", 60)
@@ -21,3 +23,14 @@ print(healing.power_level)
 print(healing)
 print(stamina)
 print(speed)
+
+
+# Create a wizard using Wizard class
+merlin = Wizard("Merlin")
+
+# Print the wizard's mana before drinking potion
+print(f'Mana before drinking a stamina potion: {merlin.mana}')
+# Let wizard drink potion
+merlin.drink(stamina)
+# Print the wizard's mana after drinking potion
+print(f'Mana after drinking a stamina potion: {merlin.mana}')
