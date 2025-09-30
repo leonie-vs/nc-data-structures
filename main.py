@@ -51,3 +51,13 @@ merlin.inventory_contents()
 # Drink last potion from inventory and print empty inventory contents
 merlin.drink(stamina)
 merlin.inventory_contents()
+
+
+
+from src.stack import Stack
+
+# Initialise stack and see default values
+some_stack = Stack()
+print(some_stack.quantity)
+print(some_stack.storage)
+print(some_stack.max_size)
