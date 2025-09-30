@@ -34,3 +34,20 @@ print(f'Mana before drinking a stamina potion: {merlin.mana}')
 merlin.drink(stamina)
 # Print the wizard's mana after drinking potion
 print(f'Mana after drinking a stamina potion: {merlin.mana}')
+
+
+# Add potions to the inventory
+merlin.add_potion(healing)
+merlin.add_potion(stamina)
+merlin.add_potion(speed)
+
+# Print the wizard's inventory contents
+merlin.inventory_contents()
+# Drink potions from inventory
+merlin.drink(healing)
+merlin.drink(speed)
+# Print inventory after drinking potions
+merlin.inventory_contents()
+# Drink last potion from inventory and print empty inventory contents
+merlin.drink(stamina)
+merlin.inventory_contents()
