@@ -109,6 +109,28 @@ def test_get_quantity_method_returns_current_length_of_storage_list():
     test_queue.dequeue()
     assert test_queue.get_quantity() == 1
 
+# Test 15
+def test_is_empty_returns_correct_boolean():
+    test_queue = Queue()
+    assert test_queue.is_empty() == True
+    test_queue.enqueue("item")
+    assert test_queue.is_empty() == False
+    test_queue.dequeue()
+    assert test_queue.is_empty() == True
+
+# Test 16
+def test_is_full_only_returns_true_when_queue_at_max_size():
+    test_queue = Queue(max_size=2)
+    assert test_queue.is_full() == False
+    test_queue.enqueue("item1")
+    assert test_queue.is_full() == False
+    test_queue.enqueue("item2")
+    assert test_queue.is_full() == True
+    test_queue.dequeue()
+    assert test_queue.is_full() == False
+
+
+
 
 
 

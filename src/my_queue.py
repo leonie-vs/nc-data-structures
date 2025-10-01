@@ -29,6 +29,15 @@ class Queue:
     def get_quantity(self):
         return len(self.storage)
     
+    def is_empty(self):
+        return self.get_quantity() == 0
+    
+    def is_full(self):
+        if self.get_quantity() == self.max_size:
+            return True
+        return False
+    
+    
 
         
         
