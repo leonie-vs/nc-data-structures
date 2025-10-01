@@ -54,6 +54,7 @@ merlin.inventory_contents()
 
 
 
+
 from src.stack import Stack
 
 # Initialise stack and see default values
@@ -102,3 +103,12 @@ print(test_stack.storage) # {0: 'apple', 1: 'orange', 2: 'banana', 3: 'kiwi', 4:
 print(test_stack.peek) # returns 'pear'
 test_stack.pop()
 print(test_stack.peek)  # returns 'kiwi'
+
+
+
+
+from src.my_queue import Queue
+
+# Try adjusting max_size instead of having a default value and print it
+test_queue = Queue(max_size=5)
+print(test_queue.max_size) # 5
