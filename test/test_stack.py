@@ -51,7 +51,7 @@ def test_pushed_item_added_to_storage():
     assert test_stack.storage == {0: "apple", 1: "banana"}
 
 # Test 8
-def test_push_respects_max_size(capsys):
+def test_push_respects_max_size():
     test_stack = Stack(max_size=1)
     test_stack.push('apple')
     test_stack.push('banana') 
