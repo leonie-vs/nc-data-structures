@@ -22,5 +22,10 @@ class Stack:
         if self.quantity == 0 and self.storage == {}:
             return True
         return False
+    
+    def is_full(self):
+        if self.quantity == self.max_size:
+            return True
+        return False
 
         

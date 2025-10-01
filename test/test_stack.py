@@ -87,4 +87,21 @@ def test_is_empty_returns_boolean_correctly():
     test_stack.push("apple")
     test_stack.push("banana")
     assert test_stack.is_empty() == False
-   
+
+# Test 12
+def test_is_full_returns_true_when_stack_full():
+    test_stack = Stack(max_size=2)
+    assert test_stack.is_full() == False
+
+    test_stack.push("apple")
+    test_stack.push("banana")
+    assert test_stack.is_full() == True
+
+# Test 13
+def test_is_full_returns_false_when_previously_full_stack_becomes_empty():
+    test_stack = Stack(max_size=2)
+    test_stack.push("apple")
+    test_stack.push("cherry")
+    assert test_stack.is_full() == True
+    test_stack.pop()
+    assert test_stack.is_full() == False

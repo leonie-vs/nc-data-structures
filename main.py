@@ -62,7 +62,7 @@ print(some_stack.quantity)
 print(some_stack.storage)
 print(some_stack.max_size)
 
-# Test out push method and max_size
+# Try push method and max_size
 test_stack = Stack(max_size=2)
 test_stack.push('apple')
 print(test_stack.storage)  
@@ -73,9 +73,20 @@ print(test_stack.quantity)
 test_stack.push('cherry')  
 print(test_stack.quantity)
 
-# Test is_empty method
+# Try is_empty method
 empty_stack = Stack()
 print(empty_stack.is_empty())
 
 empty_stack.push('cherry')
 print(empty_stack.is_empty())
+
+# Try is_full method
+full_stack = Stack(max_size=2)
+full_stack.push('apple')
+full_stack.push('cherry')
+print(full_stack.is_full()) 
+full_stack.pop()
+print(full_stack.is_full()) 
+full_stack.push('banana')
+print(full_stack.is_full()) 
+print(full_stack.quantity) 
