@@ -25,7 +25,11 @@ class Queue:
             self.back = self.storage[-1]
             self.front = self.storage[0]
         return removed_item
-        
+    
+    def get_quantity(self):
+        return len(self.storage)
+    
+
         
         
     

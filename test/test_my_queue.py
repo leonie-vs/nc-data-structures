@@ -98,6 +98,19 @@ def test_dequeue_returns_removed_item_correctly():
     assert test_queue.dequeue() == "item2"
     assert test_queue.dequeue() == None
 
+# Test 14
+def test_get_quantity_method_returns_current_length_of_storage_list():
+    test_queue = Queue()
+    assert test_queue.get_quantity() == 0
+    test_queue.enqueue("item1")
+    assert test_queue.get_quantity() == 1
+    test_queue.enqueue("item2")
+    assert test_queue.get_quantity() == 2
+    test_queue.dequeue()
+    assert test_queue.get_quantity() == 1
+
+
+
 
 
 
