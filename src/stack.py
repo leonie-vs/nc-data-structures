@@ -27,5 +27,12 @@ class Stack:
         if self.quantity == self.max_size:
             return True
         return False
+    
+    @property
+    def peek(self):
+        if self.quantity == 0:
+            return
+        return self.storage[self.quantity - 1]
+        
 
         

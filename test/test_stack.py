@@ -105,3 +105,26 @@ def test_is_full_returns_false_when_previously_full_stack_becomes_empty():
     assert test_stack.is_full() == True
     test_stack.pop()
     assert test_stack.is_full() == False
+
+# Test 14
+def test_peek_returns_none_when_stack_empty():
+    test_stack = Stack()
+    assert test_stack.peek == None
+
+# Test 15
+def test_peek_returns_most_recently_added_item():
+    test_stack = Stack()
+    test_stack.push("apple")
+    test_stack.push("cherry")
+    assert test_stack.peek == "cherry"
+
+# Test 16
+def test_peek_returns_item_without_removing_it():
+    test_stack = Stack()
+    test_stack.push("apple")
+    test_stack.push("cherry")
+    test_stack.peek
+    assert test_stack.storage[test_stack.quantity - 1] == "cherry"
+
+
+

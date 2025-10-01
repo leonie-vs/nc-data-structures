@@ -90,3 +90,15 @@ print(full_stack.is_full())
 full_stack.push('banana')
 print(full_stack.is_full()) 
 print(full_stack.quantity) 
+
+# Try peek method
+test_stack = Stack()
+test_stack.push('apple')
+test_stack.push('orange')
+test_stack.push('banana')
+test_stack.push('kiwi')
+test_stack.push('pear')
+print(test_stack.storage) # {0: 'apple', 1: 'orange', 2: 'banana', 3: 'kiwi', 4: 'pear'}
+print(test_stack.peek) # returns 'pear'
+test_stack.pop()
+print(test_stack.peek)  # returns 'kiwi'
