@@ -1,4 +1,5 @@
 from src.my_set import Set
+from src.potion import Potion
 
 ## Set attributes:
 # an instance of a set is an unordered collection of items
@@ -73,6 +74,17 @@ def test_set_instances_are_iterable():
     assert test_set1.difference(test_set2) == [6]
     assert test_set1.set == [1, 2, 3, 6]
 
+# Test 11
+def test_set_works_with_instances_of_a_class():
+    healing = Potion("Healing Potion", "Green", 30)
+    stamina = Potion("Stamina Potion", "Blue", 30)
+    speed = Potion("Speed Potion", "Yellow", 10)
+    test_set1 = Set([healing, stamina])
+    test_set2 = Set([speed])
+    assert test_set1.union(test_set2) == [healing, stamina, speed]
+    test_set1.add(stamina)
+    test_set1.add(speed)
+    assert test_set1.set == [healing, stamina, speed]
 
 
 
