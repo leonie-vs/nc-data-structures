@@ -6,7 +6,7 @@ class Wizard:
         self.mana = mana
         self.inventory = [] if inventory is None else inventory
     
-    def drink(self, potion: Potion):
+    def drink(self, potion):
         if potion in self.inventory:
             self.mana += potion.power_level
             self.inventory.remove(potion)

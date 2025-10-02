@@ -112,3 +112,20 @@ from src.my_queue import Queue
 # Try adjusting max_size instead of having a default value and print it
 test_queue = Queue(max_size=5)
 print(test_queue.max_size) # 5
+
+
+
+
+from src.my_set import Set
+
+set_1 = Set([1, 2])
+set_2 = Set([2, 3])
+
+# Union: items from both sets, no duplicates
+print(set_1.union(set_2))       # -> {1, 2, 3}
+
+# Intersection: items common to both sets
+print(set_1.intersection(set_2))  # -> {2}
+
+# Difference: items in set_1 but not in set_2
+print(set_1.difference(set_2))  # -> {1}

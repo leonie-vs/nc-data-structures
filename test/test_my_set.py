@@ -33,5 +33,46 @@ def test_add_method_adds_non_duplicate_items_to_set():
     test_set.add(4)
     assert test_set.set == [1, 2, 3, 4]
 
+# Test 5
+def test_remove_method_cannot_remove_nonexisting_item():
+    test_set = Set([1, 2, 3])
+    assert test_set.remove(4) == 'KeyError: 4'
+    assert test_set.set == [1, 2, 3]
+
+# Test 6 
+def test_remove_method_removes_existing_item():
+    test_set = Set(["hello", "bye", 3])
+    test_set.remove("hello") 
+    assert test_set.set == ["bye", 3]
+
+# Test 7 
+def test_union_method_combines_items_of_two_lists_into_one_new_list():
+    test_set = Set([1, 2, 3])
+    test_list = ['hello', 'bye']
+    assert test_set.union(test_list) == [1, 2, 3, 'hello', 'bye']
+    assert test_set.set == [1, 2, 3]
+
+# Test 8
+def test_intersection_method_returns_new_list_with_shared_elements():
+    test_set = Set([1, 2, 3])
+    test_list = [1, 3, 4, 5]
+    assert test_set.intersection(test_list) == [1, 3]
+    assert test_set.set == [1, 2, 3]
+
+# Test 9
+def test_difference_method_returns_new_list_with_elements_from_set_that_are_not_in_list():
+    test_set = Set([1, 2, 2, 3, 6])
+    test_list = [1, 2, 3, 4, 5]
+    assert test_set.difference(test_list) == [6]
+    assert test_set.set == [1, 2, 3, 6]
+ 
+ # Test 10 
+def test_set_instances_are_iterable():
+    test_set1 = Set([1, 2, 2, 3, 6])
+    test_set2 = Set([1, 2, 3, 4, 5])
+    assert test_set1.difference(test_set2) == [6]
+    assert test_set1.set == [1, 2, 3, 6]
+
+
 
 
